@@ -1,33 +1,14 @@
 {
-  "name": "client-service-react",
+  "name": "client-service-application",
   "version": "0.0.1",
-  "description": "Client Service in ReactJS",
-  "main": "webpack.config.js",
+  "description": "Client Service Application",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist",
+    "start": "NODE_ENV=development nodemon src/server/index.js --progress --colors --profile",
+    "debug": "NODE_ENV=development  nodemon --debug src/server/index.js --progress --colors --profile",
+    "start-prod": "NODE_ENV=production node src/server/index.js --progress --colors --profile",
+    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lior-a/client_service_react.git"
-  },
-  "keywords": [
-    "client",
-    "service",
-    "react",
-    "server",
-    "render",
-    "render",
-    "backend",
-    "reactjs",
-    "micro",
-    "service"
-  ],
-  "author": "Lior Amsalem",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lior-a/client_service_react/issues"
-  },
-  "homepage": "https://github.com/lior-a/client_service_react",
   "dependencies": {
     "axios": "0.7.0",
     "body-parser": "^1.15.1",
